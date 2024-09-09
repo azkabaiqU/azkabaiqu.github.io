@@ -10,35 +10,35 @@ document.addEventListener('DOMContentLoaded', () => {
                 // 1
                 title: `Rumah Adat: The Traditional Houses of Indonesia`,
                 location: `Indonesia, with its diverse cultural heritage, boasts an array of traditional houses, each reflecting the unique customs and architectural styles of its various ethnic groups. These traditional houses, or "Rumah Adat,"`,
-                imageUrl: '/img/rumah-adat.png',
+                imageUrl: '/indoexplore/img/rumah-adat.png',
                 id: '12',
             },
             {
                 // 1
                 title: `The Keris: A Sacred Symbol of Indonesian Heritage`,
                 location: `The Keris is not merely a weapon; it is a revered cultural artifact that embodies the spiritual and historical essence of Indonesia.`,
-                imageUrl: '/img/keris.png',
+                imageUrl: '/indoexplore/img/keris.png',
                 id: '10',
             },
             {
                 // 1
                 title: `Arfetak: The Unique and Enduring Craft of Indonesian Artistry`,
                 location: `Arfetak is a term that signifies a special category of traditional Indonesian crafts, showcasing the nation's rich and diverse artistic heritage.`,
-                imageUrl: '/img/artefak.png',
+                imageUrl: '/indoexplore/img/artefak.png',
                 id: '9',
             },
             {
                 // 1
                 title: `3 Custom House From bali`,
                 location: `When going on vacation to Bali, detikers will be treated to beautiful natural scenery and a variety of delicious culinary delights. But not only that, Bali is also known to have unique traditional houses.`,
-                imageUrl: '/img/3-rumah.png',
+                imageUrl: '/indoexplore/img/3-rumah.png',
                 id: '11',
             },
             {
                 // 1
                 title: 'Rendang: The Iconic Dish from Minangkabau',
                 location: 'Rendang, one of Indonesia s most famous dishes, hails from Minangkabau, West Sumatra. This slow-cooked beef dish',
-                imageUrl: '/img/rendang.png',
+                imageUrl: '/indoexplore/img/rendang.png',
                 id: '3',
     
             },
@@ -46,14 +46,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 // 1
                 title: `Songket: The Luxurious Woven Fabric`,
                 location: `Songket is a traditional fabric characterized by its rich texture and metallic threads woven into intricate patterns.`,
-                imageUrl: '/img/songket.png',
+                imageUrl: '/indoexplore/img/songket.png',
                 id: '4',
             },
             {
                 // 1
                 title: 'Satay: Diversity in Every Skewer',
                 location: `Satay is a popular dish across Indonesia, with each region offering its own unique version. From Madura's Satay with its savory peanut sauce to Padang's Satay with its spicy, thick gravy, satay showcases the rich diversity of Indonesian cuisine.`,
-                imageUrl: '/img/sate.png',
+                imageUrl: '/indoexplore/img/sate.png',
                 id: '2',
     
             },
@@ -61,49 +61,49 @@ document.addEventListener('DOMContentLoaded', () => {
                 // 1
                 title: 'Nasi Goreng: A Taste of the Archipelago on a Plate',
                 location: `Nasi Goreng is one of Indonesia's most popular street foods and a staple in homes across the country. This dish consists of fried rice mixed with seasonings such as sweet soy sauce, garlic, and chili, often accompanied by chicken, eggs, and vegetables. `,
-                imageUrl: '/img/nasi-goreng.png',
+                imageUrl: '/indoexplore/img/nasi-goreng.png',
                 id: '1',
             },
             {
                 // 1
                 title: `Wayang Kulit: Exploring the Charm of Traditional Indonesian Leather Puppet Performing Arts`,
                 location: `A traditional Balinese dance known as "Tari Cak". This dance involves a group of men sitting cross-legged,`,
-                imageUrl: '/img/wayang.png',
+                imageUrl: '/indoexplore/img/wayang.png',
                 id: '8',
             },
             {
                 // 1
                 title: `beautiful indonesian countryside`,
                 location: `almost every region has beautiful rice fields, and Indonesian people make this to plant rice, then the rice becomes rice,`,
-                imageUrl: '/img/sawah.png',
+                imageUrl: '/indoexplore/img/sawah.png',
                 id: '13',
             },
             {
                 // 1
                 title: `Uncover the Magic of Indonesia`,
                 location: `Indonesia is a very rich and diverse country, ranging from islands, customs, culture, etc.`,
-                imageUrl: '/img/magic.png',
+                imageUrl: '/indoexplore/img/magic.png',
                 id: '14',
             },
             {
                 // 1
                 title: `The explanatory sentence reveals that Indonesia offers`,
                 location: `The explanatory sentence reveals that Indonesia offers a unique experience by combining exciting adventures and rich cultural heritage. Explanation: "Explore the amazing Indonesia, where thrilling adventures meet rich culture.`,
-                imageUrl: '/img/people-bali.png',
+                imageUrl: '/indoexplore/img/people-bali.png',
                 id: '15',
             },
             {
                 // 1
                 title: `Kecak Dance: Harmony of Sound and Movement in a Typical Balinese Performance`,
                 location: `A leather puppet performance art originating from Java and Bali. The puppets are made of cowhide, carved in detail and performed behind a screen with light from oil lamps to create shadows.`,
-                imageUrl: '/img/decak.png',
+                imageUrl: '/indoexplore/img/decak.png',
                 id: '7',
             },
             {
                 // 1
                 title: `Saman Dance: The Beauty of Movement and Song from Aceh`,
                 location: `Traditional dance from Aceh which is also known as "Saman Dance" or "Serampang Dance". This dance is performed with fast and synchronized body movements, accompanied by singing and hand clapping.`,
-                imageUrl: '/img/saman.png',
+                imageUrl: '/indoexplore/img/saman.png',
                 id: '6',
             },
     
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // 1
                 title: `The Timeless Art of Batik: Indonesia's Cultural Masterpiece`,
                 location: `Batik, a traditional fabric from Indonesia, is more than just a textile—it's a cultural treasure that embodies the rich heritage and artistic ingenuity of the Indonesian people. With its intricate patterns and deep cultural significance, Batik has become a symbol of Indonesia’s identity and a testament to the nation's artistic prowess.`,
-                imageUrl: '/img/model-batik.png',
+                imageUrl: '/indoexplore/img/model-batik.png',
                 id: '5',
             },
 
@@ -127,14 +127,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 // 1
                 title: `Rumah Adat: The Traditional Houses of Indonesia`,
                 location: `Indonesia, with its diverse cultural heritage, boasts an array of traditional houses, each reflecting the unique customs and architectural styles of its various ethnic groups. These traditional houses, or "Rumah Adat,"`,
-                imageUrl: '/img/rumah-adat.png',
+                imageUrl: '/indoexplore/img/rumah-adat.png',
                 id: '12',
             },
             {
                 // 1
                 title: `3 Custom House From bali`,
                 location: `When going on vacation to Bali, detikers will be treated to beautiful natural scenery and a variety of delicious culinary delights. But not only that, Bali is also known to have unique traditional houses.`,
-                imageUrl: '/img/3-rumah.png',
+                imageUrl: '/indoexplore/img/3-rumah.png',
                 id: '11',
             },
             
@@ -146,14 +146,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 // 1
                 title: `The Keris: A Sacred Symbol of Indonesian Heritage`,
                 location: `The Keris is not merely a weapon; it is a revered cultural artifact that embodies the spiritual and historical essence of Indonesia.`,
-                imageUrl: '/img/keris.png',
+                imageUrl: '/indoexplore/img/keris.png',
                 id: '10',
             },
             {
                 // 1
                 title: `Arfetak: The Unique and Enduring Craft of Indonesian Artistry`,
                 location: `Arfetak is a term that signifies a special category of traditional Indonesian crafts, showcasing the nation's rich and diverse artistic heritage.`,
-                imageUrl: '/img/artefak.png',
+                imageUrl: '/indoexplore/img/artefak.png',
                 id: '9',
             },
 
@@ -163,21 +163,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 // 1
                 title: `Wayang Kulit: Exploring the Charm of Traditional Indonesian Leather Puppet Performing Arts`,
                 location: `A traditional Balinese dance known as "Tari Cak". This dance involves a group of men sitting cross-legged,`,
-                imageUrl: '/img/wayang.png',
+                imageUrl: '/indoexplore/img/wayang.png',
                 id: '8',
             },
             {
                 // 1
                 title: `Kecak Dance: Harmony of Sound and Movement in a Typical Balinese Performance`,
                 location: `A leather puppet performance art originating from Java and Bali. The puppets are made of cowhide, carved in detail and performed behind a screen with light from oil lamps to create shadows.`,
-                imageUrl: '/img/decak.png',
+                imageUrl: '/indoexplore/img/decak.png',
                 id: '7',
             },
             {
                 // 1
                 title: `Saman Dance: The Beauty of Movement and Song from Aceh`,
                 location: `Traditional dance from Aceh which is also known as "Saman Dance" or "Serampang Dance". This dance is performed with fast and synchronized body movements, accompanied by singing and hand clapping.`,
-                imageUrl: '/img/saman.png',
+                imageUrl: '/indoexplore/img/saman.png',
                 id: '6',
             },
     
@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // 1
                 title: `The Timeless Art of Batik: Indonesia's Cultural Masterpiece`,
                 location: `Batik, a traditional fabric from Indonesia, is more than just a textile—it's a cultural treasure that embodies the rich heritage and artistic ingenuity of the Indonesian people. With its intricate patterns and deep cultural significance, Batik has become a symbol of Indonesia’s identity and a testament to the nation's artistic prowess.`,
-                imageUrl: '/img/model-batik.png',
+                imageUrl: '/indoexplore/img/model-batik.png',
                 id: '5',
             },
 
@@ -195,7 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // 1
                 title: `Songket: The Luxurious Woven Fabric`,
                 location: `Songket is a traditional fabric characterized by its rich texture and metallic threads woven into intricate patterns.`,
-                imageUrl: '/img/songket.png',
+                imageUrl: '/indoexplore/img/songket.png',
                 id: '4',
             },
 
@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // 1
             title: 'Rendang: The Iconic Dish from Minangkabau',
             location: 'Rendang, one of Indonesia s most famous dishes, hails from Minangkabau, West Sumatra. This slow-cooked beef dish',
-            imageUrl: '/img/rendang.png',
+            imageUrl: '/indoexplore/img/rendang.png',
             id: '3',
 
         },
@@ -215,7 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // 1
             title: 'Satay: Diversity in Every Skewer',
             location: `Satay is a popular dish across Indonesia, with each region offering its own unique version. From Madura's Satay with its savory peanut sauce to Padang's Satay with its spicy, thick gravy, satay showcases the rich diversity of Indonesian cuisine.`,
-            imageUrl: '/img/sate.png',
+            imageUrl: '/indoexplore/img/sate.png',
             id: '2',
 
         },
@@ -223,7 +223,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // 1
             title: 'Nasi Goreng: A Taste of the Archipelago on a Plate',
             location: `Nasi Goreng is one of Indonesia's most popular street foods and a staple in homes across the country. This dish consists of fried rice mixed with seasonings such as sweet soy sauce, garlic, and chili, often accompanied by chicken, eggs, and vegetables. `,
-            imageUrl: '/img/nasi-goreng.png',
+            imageUrl: '/indoexplore/img/nasi-goreng.png',
             id: '1',
         },
      
