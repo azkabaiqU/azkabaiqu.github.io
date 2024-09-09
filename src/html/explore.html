@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore - IndoExplore</title>
+    <link rel="icon" href="/img/mini-icon.png">
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <!-- css -->
+    <link href="/src/css/style.css" rel="stylesheet">
+    <!-- awesome icon -->
+    <link rel="stylesheet" href="/asset/fontAwesome/css/all.min.css">
+    <!-- js -->
+    <script src="/src/js/card-explore.js"></script>
+
+    <style>
+        /* hover area */
+
+        .indonesia-maps-value {
+            position: relative;
+            /* Ensure the relative positioning for ::after */
+        }
+
+        .indonesia-maps-value::after {
+            content: 'Text Hover';
+            position: absolute;
+            inset: 0;
+            display: flex;
+            bottom: 0.75rem;
+            right: 0.75rem;
+            align-items: center;
+            justify-items: center;
+            color: #2b2b2b;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 1;
+            /* Ensure it's above the text */
+        }
+
+        .indonesia-maps-value:hover::after {
+            opacity: 1;
+        }
+
+        .indonesia-maps-value p {
+            margin: 0;
+            color: black;
+            position: relative;
+            z-index: 0;
+        }
+
+        .indonesia-maps-value:hover p {
+            opacity: 0;
+        }
+
+        .hover-opacity-img {
+            opacity: 1;
+        }
+
+        .hover-opacity-img:hover {
+            opacity: 0;
+        }
+
+        .bg-white-navbar-value {
+            background-color: white;
+        }
+
+        .navbar-normal.hidden {
+            bottom: 0;
+            right: 0;
+            left: 0;
+            position: fixed;
+            transition-duration: 400ms;
+        }
+
+        .navbar-normal {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /*  */
+        .navbar-value.sticky {
+            transition-duration: 400ms;
+            top: 0;
+        }
+
+        .position-nav-nor {
+            position: sticky;
+        }
+
+        .top-nav-nor {
+            top: 0;
+        }
+
+        .navbar-value {
+            transition: top 0.3s ease-in-out;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body class="font-trip-r  h-full min-h-screen">
+    <!-- searching -->
+    <div id="buttonHide" class="bg-white/30 hidden">
+        <div id="background"
+            class="fixed z-50 pt-72 px-3 flex justify-center items-start backdrop-blur-3xl w-[100vw] h-[100vh]">
+            <div class="relative w-[500px] font-trip-r">
+                <h1 class="font-trip-m sm:text-3xl text-2xl text-center mb-5">🔍 Where To Go?</h1>
+                <input type="text" id="search-bar " type="text" name="search"
+                    class="bg-white/80  w-full sm:h-[60px] h-[50px] text-sm focus:box-shadow-l focus:ring-0 focus:ring-gray-300 p-2 px-4 border border-gray-300 rounded-xl"
+                    placeholder="Bali?, Jepara?, Bandung?, What do u want?" onclick="toggleDropdown()"
+                    oninput="filterCards()">
+            </div>
+        </div>
+    </div>
+
+    <div class="flex items-center justify-center | pb-10   bg-gradient-blue ">
+        <div id="navbar-normal"
+                class="navbar-area navbar-normal  top-nav-nor position-nav-nor | z-50 fixed w-full top-0 flex justify-center items-center ">
+                <div class="box-shadows min-w-[300px] bg-white/90 backdrop-blur-xl py-1.5 p-1 mt-3 rounded-lg">
+                    <ul class="flex justify-center  font-trip-r text-sm">
+                        <a href="index.html" class="mr-1 p-2 px-3 flex items-center   rounded-lg ">Home</a>
+                        <a href="explore.html" bg-brown
+                            class="mr-1 flex items-center px-3 rounded-lg   text-white/80 bg-orange-950">
+                            Explore</a>
+                        <a href="article.html" class="mr-1 flex items-center   px-3  rounded-lg ">Article</a>
+                        <a href="community.html" class="  px-3 flex items-center   rounded-lg ">Community</a>
+                    </ul>
+                </div>
+            </div>
+        <div>
+
+            <!-- navbar -->
+            
+
+            <!-- content -->
+            <div class="">
+                <div class="w-full mb-10 md:mt-4 mt-20 flex justify-between  px-4">
+                    <div>
+                        <img class="sm:w-36 w-28" src="/img/big logo.png" alt="">
+                    </div>
+                    <div class="flex items-center">
+                    <button
+                        class="mt-1 sm:w-[100px] w-[80px] rounded-lg py-2 px-2 duration-100  text-orange-950 h mr-2 ">
+                        <p class="   text-md text-sm">Sign In</p>
+                    </button>
+                    <button
+                        class="mt-1 sm:w-[100px] w-[80px] rounded-lg py-2 px-2 duration-100 bg-orange-950 hover:bg-white/30">
+                        <p class=" text-white/80 hover:text-black   text-md sm:text-sm text-xs">Sign Up</p>
+                    </button>
+                    </div>
+                </div>
+                <!-- title -->
+                <h1 id="title" class="sm:text-3xl text-xl font-trip-m text-center mb-12">🗺️ Discover the Wonders of
+                    Indonesia:<br>
+                    Natural Paradise and Its Delights</h1>
+                <!-- other navbar -->
+                <div class="navbar-other-travel | flex justify-center items-center font-trip-r">
+                    <a href="ticket.html"
+                        class="flex flex-col lg:flex-row text-center duration-100 xl:justify-start justify-center items-center md:rounded-xl sm:rounded-lg rounded-md md:h-[120px] sm:h-[100px] h-auto xl:w-[300px] lg:w-[238px] md:w-[162px] sm:w-[120px] w-auto sm:px-2 px-2 mr-1.5 bg-white/70 hover:bg-white lg:text-left lg:h-[70px]  lg:px-6 ">
+                        <h1 class="md:text-6xl sm:text-4xl text-sm">🎟️</h1>
+                        <div class="lg:text-left mt-0 text-center lg:ml-2 ml-0">
+                            <p class="md:text-xl sm:text-md text-sm">Ticket</p>
+                            <p class="text-xs mt-0 md:block hidden">Plane • Train • Travel</p>
+                        </div>
+                    </a>
+                    <a href="tour-guide.html"
+                        class="flex flex-col lg:flex-row text-center duration-100 xl:justify-start justify-center  md:rounded-xl rounded-lg items-center md:h-[120px] sm:h-[100px] h-auto xl:w-[300px] lg:w-[238px] md:w-[162px] sm:w-[120px]  w-auto sm:px-2 px-2 mr-1.5 bg-white/70 hover:bg-white lg:text-left lg:h-[70px]  lg:px-6 ">
+                        <h1 class="md:text-5xl sm:text-4xl text-sm">🕵🏼‍♀️</h1>
+                        <div class="lg:text-left text-center lg:ml-2 ml-0">
+                            <p class="md:text-xl sm:text-md text-sm">Tour Guider</p>
+                            <p class="text-xs mt-0 md:block hidden">Private • Group</p>
+                        </div>
+                    </a>
+                    <a href="explorer-guide.html"
+                        class="flex flex-col lg:flex-row text-center duration-100 xl:justify-start justify-center  md:rounded-xl rounded-lg items-center md:h-[120px] sm:h-[100px] h-auto xl:w-[300px] lg:w-[238px] md:w-[162px] sm:w-[120px]  w-auto sm:px-2 px-2 mr-1.5 bg-white/70 hover:bg-white lg:text-left lg:h-[70px]  lg:px-6 ">
+                        <h1 class="md:text-5xl sm:text-4xl text-sm">📙</h1>
+                        <div class="lg:text-left text-center lg:ml-2 ml-0">
+                            <p class="md:text-xl sm:text-md text-sm">Explorer Guide</p>
+                            <p class="text-xs mt-0 md:block hidden">What? • How? • Why?</p>
+                        </div>
+                    </a>
+                    <a href="your-order.html"
+                        class="flex flex-col lg:flex-row text-center duration-100 xl:justify-start justify-center md:rounded-xl rounded-lg items-center md:h-[120px] sm:h-[100px] h-auto xl:w-[300px] lg:w-[238px] md:w-[162px] sm:w-[120px]  w-auto sm:px-2 px-2  bg-white/70  hover:bg-white lg:text-left lg:h-[70px]  lg:px-6 ">
+                        <h1 class="md:text-5xl sm:text-4xl text-sm">📋</h1>
+                        <div class="lg:text-left text-center lg:ml-2 ml-0">
+                            <p class="md:text-xl sm:text-md text-sm">Your Order</p>
+                            <p class="text-xs mt-0 md:block hidden">Ticket • Destination • Guide Tour</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- big-img with function -->
+                <div class="flex justify-center  ">
+                    <div class="group-maps | md:flex flex-row justify-center items-center ">
+                        <!-- Gambar Besar -->
+                        <div class="flex justify-center w-full ">
+                            <div
+                                class=" |   sm:w-[500px] w-[365px] lg:w-[800px] xl:w-[1050px]  md:h-[570px] sm:h-[400px] h-[300px]  sm:mx-1.5 mx-0 mt-1.5 md:mb-1.5 mb-0  overflow-hidden rounded-2xl">
+                                <div
+                                    class="absolute  flex justify-start items-end  sm:w-[500px] w-[365px] lg:w-[800px] xl:w-[1050px]  md:h-[570px] sm:h-[400px] h-[300px]   rounded-2xl  ">
+                                    <div class="absolut py-1 px-3 bg-white/70 backdrop-blur-2xl sm:rounded-xl rounded-xl m-5 duration-200">
+                                        <p id="title-text" class="md:text-xl sm:text-lg text-md font-trip-r">
+                                            Republic of Indonesia
+                                        </p>
+                                    </div>
+                                </div>
+                                <img id="main-image" src="/img/indonesia.png" alt="im-indonesia"
+                                    class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <!-- Thumbnail -->
+                        <div class="">
+                            <div
+                                class="md:h-[570px] h-auto  md:w-40 sm:w-[500px] w-[370px] my-1.5 md-1.5 md:ml-0 ml-1.5 md:overflow-y-scroll rounded-2xl overflow-x-auto">
+                                <div class="flex-row  flex md:flex-col   md:w-[160px] w-max ">
+                                    <!-- indonesia -->
+                                    <div dataregion="indonesia-img" id="indonesia-img"
+                                        onclick="changeContent('/img/indonesia.png','Indonesia', 'Indonesia is a country rich in nature and culture, and has thousands of islands.','Republic of Indonesia')"
+                                        class="indonesia-bar | md:mb-1.5 mb-0 md:mr-0 sm:mr-2 mr-1 md:w-[160px] sm:w-[120px] w-[90px] md:h-[155px] sm:h-[120px] h-[90px] bg-white rounded-2xl overflow-hidden">
+                                        <div class="relative w-full h-full">
+
+                                            <div class="overlay click-btn-blur | backdrop-blur-md bg-white/20 rounded-2xl flex justify-center items-center w-full h-full absolute hover-opacity-img duration-100"
+                                                onclick="changeRegion('indonesia')">
+                                                <div
+                                                    class="absolute bottom-3 right-3 sm:py-1 py-0.5 md:px-3 sm:px-2 px-1 bg-white/70 backdrop-blur-xl rounded-2xl  duration-200">
+                                                    <p class="md:text-lg sm:text-md text-base font-trip-r">
+                                                        144
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <img src="/img/indonesia.png" alt="indonesia"
+                                                class="w-full h-full object-cover">
+                                        </div>
+                                    </div>
+                                    <!-- jawa -->
+                                    <div dataregion="jawa-img" id="jawa-img"
+                                        onclick="changeContent('/img/jawa.png','Java', 'Java captivates with its rich culture and stunning landscapes, from temples to mountains.','Island of Java')"
+                                        class="indonesia-bar | md:mb-1.5 mb-0 md:mr-0 sm:mr-2 mr-1  md:w-[160px] sm:w-[120px] w-[90px] md:h-[155px] sm:h-[120px] h-[90px] bg-white rounded-2xl overflow-hidden ">
+                                        <div class="relative w-full h-full">
+
+                                            <div class="overlay click-btn-blur  | rounded-2xl flex justify-center items-center w-full h-full absolute hover-opacity-img duration-200"
+                                                onclick="changeRegion('jawa')">
+                                                <div
+                                                    class="absolute bottom-3 right-3  sm:py-1 py-0.5 md:px-3 sm:px-2 px-1 bg-white/70 backdrop-blur-xl rounded-2xl  duration-200">
+                                                    <p class="md:text-lg sm:text-md text-base font-trip-r">
+                                                        45
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <img src="/img/jawa.png" alt="Jawa" class="w-full h-full object-cover">
+                                        </div>
+                                    </div>
+
+                                    <!-- sulawesi -->
+                                    <div dataregion="sulawesi-img" id="sulawesi-img"
+                                        onclick="changeContent('/img/sulawesi.png','Sulawesi', 'Sulawesi is enchanting with its marine, mountainous and cultural riches. Adventure and diversity await at every corner.','Island of Sulawesi')"
+                                        class="indonesia-bar | md:mb-1.5 mb-0 md:mr-0 sm:mr-2 mr-1 md:w-[160px] sm:w-[120px] w-[90px] md:h-[155px] sm:h-[120px] h-[90px] bg-white rounded-2xl overflow-hidden">
+                                        <div class="relative w-full h-full">
+                                            <div class="overlay click-btn-blur  | rounded-2xl flex justify-center items-center w-full h-full absolute hover-opacity-img duration-200"
+                                                onclick="changeRegion('sulawesi')">
+                                                <div
+                                                    class="absolute bottom-3 right-3  sm:py-1 py-0.5 md:px-3 sm:px-2 px-1 bg-white/70 backdrop-blur-xl rounded-2xl  duration-200">
+                                                    <p class="md:text-lg sm:text-md text-base font-trip-r">
+                                                        41
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <img src="/img/sulawesi.png" alt="Sulawesi"
+                                                class="w-full h-full object-cover">
+                                        </div>
+                                    </div>
+                                    <!-- kalimantan -->
+                                    <div dataregion="kalimantan-img" id="kalimantan-img"
+                                        onclick="changeContent('/img/kalimantan.png','Kalimantan', 'Kalimantan amazes with its dense tropical forests, vast rivers and unique wildlife.','Island of Kalimantan')"
+                                        class="indonesia-bar | md:mb-1.5 mb-0 md:mr-0 sm:mr-2 mr-1 md:w-[160px] sm:w-[120px] w-[90px] md:h-[155px] sm:h-[120px] h-[90px] bg-white rounded-2xl overflow-hidden">
+                                        <div class="relative w-full h-full">
+                                            <div class="overlay click-btn-blur  | rounded-2xl flex justify-center items-center w-full h-full absolute hover-opacity-img duration-200"
+                                                onclick="changeRegion('kalimantan')">
+                                                <div
+                                                    class="absolute bottom-3 right-3  sm:py-1 py-0.5 md:px-3 sm:px-2 px-1 bg-white/70 backdrop-blur-xl rounded-2xl  duration-200">
+                                                    <p class="md:text-lg sm:text-md text-base font-trip-r">
+                                                        36
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <img src="/img/kalimantan.png" alt="Kalimantan"
+                                                class="w-full h-full object-cover">
+                                        </div>
+                                    </div>
+                                    <!-- sumatra -->
+                                    <div dataregion="sumatra-img" id="sumatra-img"
+                                        onclick="changeContent('/img/sumatra.png','Sumatra', 'Sumatra offers stunning natural beauty, from volcanic lakes to tropical forests.','Island of Sumatra')"
+                                        class="indonesia-bar | md:w-[160px] sm:w-[120px] w-[90px] md:h-[155px] sm:h-[120px] h-[90px]] bg-white rounded-2xl overflow-hidden">
+                                        <div class="relative w-full h-full">
+
+                                            <div class="overlay click-btn-blur  | rounded-2xl flex justify-center items-center w-full h-full absolute hover-opacity-img duration-200"
+                                                onclick="changeRegion('sumatra') ">
+                                                <div
+                                                    class="absolute bottom-3 right-3  sm:py-1 py-0.5 md:px-3 sm:px-2 px-1 bg-white/70 backdrop-blur-xl rounded-2xl  duration-200">
+                                                    <p class="md:text-lg sm:text-md text-base font-trip-r">
+                                                        28
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <img  src="/img/sumatra.png" alt="Sumatra"
+                                                class="w-full h-full object-cover">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- navbar value -->
+                <div id="navbar-value"
+                    class="navbar-value | static sm:sticky z-10 flex justify-center items-center  mx-0 ">
+                    <div id="navbar-value-In"
+                        class="   xl:flex flex-row sm:mx-5 mx-0  h-[150] lg:w-[1000px] xl:w-[1250px] md:w-[700px] sm:w-[600px] w-full sm:p-5 p-2 bg-white/50 backdrop-blur-2xl sm:rounded-2xl rounded-lg ">
+
+                        <div class="sm:flex flex-col justify-center items-center">
+                            <div class="item-place | sm:flex flex-row ">
+                                <!-- total -->
+                                <div class="w-full sm:mr-2 mr-0">
+                                    <button id="total-value"
+                                        class="navbar-btn-value | sm:py-5 py-2 xl:w-[135px]  lg:w-[170px] md:w-[126px] sm:w-[120px] w-full  h-[150]  rounded-lg bg-white/80  font-trip-r button-desc">
+                                        <h1 class="desc-num | xl:text-3xl sm:text-2xl text-xl">144</h1>
+                                        <p class="desc-place | text-xs mt-1">All</p>
+                                    </button>
+                                </div>
+                                <!-- destination & accommodation -->
+                                <div class="flex sm:mt-0 mt-1 w-full">
+                                    <button id="destination-value"
+                                        class="navbar-btn-value | sm:py-5 py-2 xl:w-[135px] lg:w-[190px] md:w-[126px] sm:w-[100px] w-full   hover:bg-white/50  rounded-lg   sm:mr-2 mr-1 font-trip-r button-desc">
+                                        <h1 class="desc-num | xl:text-3xl sm:text-2xl text-xl">42</h1>
+                                        <p class="desc-place | text-xs mt-1">Destination</p>
+                                    </button>
+
+                                    <button id="accommodation-value"
+                                        class="navbar-btn-value | sm:py-5 py-2 xl:w-[135px]  lg:w-[190px] md:w-[126px] sm:w-[100px] w-full   hover:bg-white/50  rounded-lg  sm:mr-2 mr-1  font-trip-r button-desc">
+                                        <h1 class="desc-num | xl:text-3xl sm:text-2xl text-xl">35</h1>
+                                        <p class="desc-place | text-xs mt-1">Accommodation</p>
+                                    </button>
+                                </div>
+                                <!-- entertainment & culinary place -->
+                                <div class="flex sm:mt-0 mt-1 w-full">
+                                    <button id="entertainment-value"
+                                        class="navbar-btn-value | sm:py-5 py-2 xl:w-[135px]  lg:w-[190px] md:w-[126px] sm:w-[100px] w-full    hover:bg-white/50  rounded-lg b sm:mr-2 mr-1  font-trip-r button-desc">
+                                        <h1 class="desc-num | xl:text-3xl sm:text-2xl text-xl">36</h1>
+                                        <p class="desc-place | text-xs mt-1">Entertainment</p>
+                                    </button>
+
+                                    <button id="culinary-place-value"
+                                        class="navbar-btn-value | sm:py-5 py-2 xl:w-[135px] lg:w-[190px] md:w-[126px] sm:w-[100px] w-full    hover:bg-white/50  rounded-lg   font-trip-r button-desc">
+                                        <h1 class="desc-num | xl:text-3xl sm:text-2xl text-xl">31</h1>
+                                        <p class="desc-place | text-xs mt-1">Culinary Place</p>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- about & btn -->
+                        <div class="flex justify-between items-center  sm:mt-3 mt-5">
+                            <!-- desc -->
+                            <div class=" pl-4 pr-2 py-3 xl:w-[300px]  sm:w-full w-[250px] font-trip-r">
+                                <h1 class="sm:text-md text-sm font-trip-m">About <span id="title-text-desc"
+                                        class="">Indonesia</span></h1>
+                                <p class="text-xs line-clamp-2" id="desc-of-place">Indonesia is a beautiful country in
+                                    terms of
+                                    nature
+                                    and culture</p>
+                            </div>
+                            <!-- btn -->
+                            <div class=" px-3 sm:w-auto w-[100px] flex justify-end items-center ">
+                                <div class="font-trip-r">
+                                    <p class="  text-center text-xs font-trip-r">What are you looking for?</p>
+                                    <button id="buttonShow"
+                                        class="mt-1 sm:w-[150px] w-[80px] rounded-lg py-2 px-2 duration-100 bg-orange-950 hover:bg-white/30">
+                                        <p class=" text-white/80 hover:text-black   text-md text-sm">Search</p>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card container -->
+                <div class="flex items-center justify-center  ">
+                    <div id="card-container" class="lg:w-[77vw] flex justify-center w-full flex-  pt-10"
+                        style="flex-wrap: wrap; ">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+    <script>
+        // ganti gambar saat meng click img lain
+        function changeContent(imageSrc, titleText, descriptionText, bigTitle) {
+            // Mengganti gambar utama
+            document.getElementById('main-image').src = imageSrc;
+
+            // Mengganti judul
+            document.getElementById('title-text-desc').textContent = titleText;
+
+            // Mengganti deskripsi
+            document.getElementById('desc-of-place').textContent = descriptionText;
+
+            // menganti text yang di dalam ing
+            document.getElementById('title-text').textContent = bigTitle;
+        }
+
+        function toggleDropdown() {
+            const dropdown = document.getElementById('dropdown-content');
+            dropdown.classList.toggle('hidden');
+        }
+
+        window.onclick = function (event) {
+            if (!event.target.matches('#search-bar')) {
+                const dropdown = document.getElementById('dropdown-content');
+                if (!dropdown.classList.contains('hidden')) {
+                    dropdown.classList.add('hidden');
+                }
+            }
+        }
+
+        // big-img function
+        document.querySelectorAll('.click-btn-blur').forEach(button => {
+            button.addEventListener('click', function () {
+                // Hapus class blur dari semua tombol
+                document.querySelectorAll('.click-btn-blur').forEach(btn => {
+                    btn.classList.remove('bg-white/20');
+                    btn.classList.remove('backdrop-blur-md');
+                    btn.classList.add('hover-opacity-img');
+
+                });
+
+                // Tambahkan class blur hanya pada tombol yang diklik
+                this.classList.add('bg-white/20');
+                this.classList.add('backdrop-blur-md');
+                this.classList.remove('hover-opacity-img');
+
+            });
+        });
+
+        // btn value 
+        document.querySelectorAll('.navbar-btn-value').forEach(button => {
+            button.addEventListener('click', function () {
+                // Hapus class  dari semua tombol
+                document.querySelectorAll('.navbar-btn-value').forEach(btn => {
+                    btn.classList.remove('bg-white-navbar-value');
+                    btn.classList.remove('bg-white/80');
+                    btn.classList.add('hover:bg-white/50');
+                });
+                this.classList.add('bg-white-navbar-value');
+                this.classList.add('bg-white/80');
+                this.classList.remove('hover:bg-white/50');
+            });
+        });
+
+
+        // animation navbar switching 
+        window.addEventListener('scroll', function () {
+            const navbar1 = document.getElementById('navbar-normal');
+            const navbarDescription = document.getElementById('navbar-value');
+            const navbarDescriptionIn = document.getElementById('navbar-value-In');
+            const navbarDescriptionOffset = navbarDescription.getBoundingClientRect().top;
+            const screenWidth = window.innerWidth;
+
+            if (screenWidth > 640) { // Hanya aktif jika layar lebih besar dari sm
+                if (navbarDescriptionOffset <= 90) {
+                    navbar1.classList.add('hidden');
+                    navbar1.classList.remove('top-nav-nor');
+                    navbarDescriptionIn.classList.add('bg-white/60');
+                    navbarDescriptionIn.classList.remove('bg-white/50');
+                    navbarDescriptionIn.classList.add('box-shadow-l');
+                    navbarDescriptionIn.classList.add('mt-3');
+
+                    navbarDescription.classList.add('sticky'); // Make Navbar Description sticky
+                } else {
+                    navbar1.classList.add('top-nav-nor');
+                    navbar1.classList.add('position-nav-nor');
+                    navbar1.classList.remove('hidden');
+
+                    navbarDescription.classList.remove('sticky'); // Remove sticky from Navbar Description
+                    navbarDescriptionIn.classList.remove('bg-white/60');
+                    navbarDescriptionIn.classList.remove('box-shadow-l');
+                    navbarDescriptionIn.classList.remove('mt-3');
+
+                    navbarDescriptionIn.classList.add('bg-white/50');
+                }
+            } else {
+                navbarDescription.classList.remove('sticky'); // Force remove sticky for sm and below
+            }
+        });
+
+        // showCircle function (searching)
+        function showCircle() {
+            const circleElement = document.getElementById("buttonHide");
+            circleElement.style.display = "block";
+        }
+
+        // hideCircle function (searching)
+        function hideCircle() {
+            const circleElement = document.getElementById("buttonHide");
+            circleElement.style.display = "none";
+        }
+
+        // buttonShow const (searching)
+        const buttonShow = document.getElementById("buttonShow");
+        buttonShow.addEventListener("click", showCircle);
+
+        // for close the searching (searching)
+        const background = document.getElementById("background");
+        background.addEventListener("click", function (event) {
+            if (event.target === background) {
+                hideCircle();
+            }
+        });
+    </script>
+</body>
+
+</html>

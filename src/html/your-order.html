@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Order - IndoExplore</title>
+    <link rel="icon" href="/img/mini-icon.png">
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <!-- css -->
+    <link href="/src/css/style.css" rel="stylesheet">
+    <!-- awesome icon -->
+    <link rel="stylesheet" href="/asset/fontAwesome/css/all.min.css">
+</head>
+
+<body class="font-trip-r">
+    <div class=" bg-gradient-blue  h-full min-h-screen flex justify-center   pb-20 ">
+        <div>
+            <a href="/src/html/explore.html"
+                class="sticky  top-2 mx-5 cursor-pointer z-50 mb-3 h-[40px] justify-between flex py-2 px-3 items-center bg-white/50 backdrop-blur-3xl shadow-2xl rounded-2xl">
+                <p class="text-sm">← Go back</p>
+                <p>📋</p>
+            </a>
+            <div>
+                <h1 class="font-trip-m sm:text-3xl text-2xl text-center mb-5 mt-20">📋 Your Order</h1>
+            </div>
+            <div id="navbar-value" class="navbar-value | static sm:sticky z-10 flex justify-center items-center  ">
+                <div id="navbar-value-In"
+                    class="   xl:flex flex-row sm:mx-5 mx-0  h-[150] lg:w-[770px] xl:w-[780px] md:w-[700px] sm:w-[600px] w-full sm:p-5 p-2 bg-white/50 backdrop-blur-2xl rounded-2xl ">
+
+                    <div class="sm:flex flex-col justify-center items-center">
+                        <div class="item-place | sm:flex flex-row ">
+                            <div class="w-full sm:mr-2 mr-0">
+                                <button data-target="all" id="all-value"
+                                    class="navbar-btn-value | sm:py-5 py-2 xl:w-[135px]  lg:w-[170px] md:w-[126px] sm:w-[120px] w-full  h-[150]  rounded-lg bg-white  font-trip-r button-desc">
+                                    <h1 class="desc-num | xl:text-3xl sm:text-2xl text-xl">1</h1>
+                                    <p class="desc-place | text-xs mt-1">All</p>
+                                </button>
+                            </div>
+
+                            <div class="flex sm:mt-0 mt-1 w-full">
+                                <button data-target="plane" id="plane-value"
+                                    class="navbar-btn-value | sm:py-5 py-2 xl:w-[135px] lg:w-[190px] md:w-[126px] sm:w-[100px] w-full   hover:bg-white/50  rounded-lg   sm:mr-2 mr-1 font-trip-r button-desc">
+                                    <h1 class="desc-num | xl:text-3xl sm:text-2xl text-xl">1</h1>
+                                    <p class="desc-place | text-xs mt-1">Plane Ticket</p>
+                                </button>
+
+                                <button data-target="train" id="train-value"
+                                    class="navbar-btn-value | sm:py-5 py-2 xl:w-[135px]  lg:w-[190px] md:w-[126px] sm:w-[100px] w-full   hover:bg-white/50  rounded-lg  sm:mr-2 mr-1  font-trip-r button-desc">
+                                    <h1 class="desc-num | xl:text-3xl sm:text-2xl text-xl">0</h1>
+                                    <p class="desc-place | text-xs mt-1">Train Ticket</p>
+                                </button>
+                            </div>
+                            <div class="flex sm:mt-0 mt-1 w-full">
+                                <button data-target="travel" id="travel-value"
+                                    class="navbar-btn-value | sm:py-5 py-2 xl:w-[135px]  lg:w-[190px] md:w-[126px] sm:w-[100px] w-full    hover:bg-white/50  rounded-lg b sm:mr-2 mr-1  font-trip-r button-desc">
+                                    <h1 class="desc-num | xl:text-3xl sm:text-2xl text-xl">0</h1>
+                                    <p class="desc-place | text-xs mt-1">Travel Ticket</p>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center items-center  sm:mt-3 mt-5">
+                        <div class=" px-3 w-auto  flex lg:justify-end justify-center items-center ">
+                            <div class="font-trip-r">
+                                <p class="  text-center text-xs font-trip-r">What are you looking for?</p>
+                                <button class="mt-1 lg:w-[150px] w-full rounded-lg py-2 px-2 bg-brown ">
+                                    <p class=" text-white/80 text-sm ">Search</p>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="ticket-area  | w-full mt-20  flex justify-center items-center">
+                <div>
+                    <div
+                        class="ticket font-mono | mb-5 lg:flex flex-col lg:flex-row lg:h-[270px] sm:h-[430px] h-[350px] lg:w-[750px] sm:w-[500px] w-[370px] lg:justify-between justify-center overflow-hidden bg-white/50 rounded-2xl">
+                        <div class="flex">
+                            <div class="flex flex-col justify-center items-center w-[50px]  bg-white">
+                                <div class="flex -rotate-90">
+                                    <p class="text-xl mr-1">Plane</p>
+                                    <p class="text-xl">Ticket</p>
+                                </div>
+                            </div>
+                            <div class="py-5 px-2 sm:w-[500px] w-[370px]">
+                                <div class="text-gray-600">
+                                    <div class="flex justify-center mb-5">
+                                        <div class="mr-8">
+                                            <p class="text-xs text-gray-400">Name Of Passenger</p>
+                                            <h1 class="text-sm font-medium">JOSTAR</h1>
+                                        </div>
+                                        <div class="mr-8">
+                                            <p class="text-xs text-gray-400">Flight</p>
+                                            <h1 class="text-sm font-medium">Air Asia</h1>
+                                        </div>
+                                        <div class="mr-8">
+                                            <p class="text-xs text-gray-400">Date</p>
+                                            <h1 class="text-sm font-medium">07 April 2024</h1>
+                                        </div>
+                                        <div class="mr-8">
+                                            <p class="text-xs text-gray-400">Seat</p>
+                                            <h1 class="text-sm font-medium">7A</h1>
+                                        </div>
+                                    </div>
+                                    <div class="flex sm:h-[80px]  justify-center items-center mb-5">
+                                        <h1 class="lg:text-3xl sm:text-2xl text-center text-lg font-bold">
+                                            IDN/JAKARTA <span class="text-4xl">✈︎</span> IDN/BANDUNG
+                                        </h1>
+                                    </div>
+                                    <div class="flex justify-center items-center">
+                                        <div class="mr-4 text-center ">
+                                            <p class="text-xs text-gray-400">Gate</p>
+                                            <h1 class="text-sm font-medium">D 12</h1>
+                                        </div>
+                                        <div class="text-center mr-4">
+                                            <p class="text-xs text-gray-400">Boarding Time</p>
+                                            <h1 class="text-sm font-medium">07:30</h1>
+                                        </div>
+                                        <div class="text-center">
+                                            <p class="text-xs text-gray-400">Class</p>
+                                            <h1 class="text-sm font-medium">Ekonomi</h1>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="flex lg:flex-col flex-row items-center justify-center lg:w-[200px] w-full lg:border-l-2 border-l-0 lg:border-t-0 border-t-2 border-gray-300 border-dashed  p-4">
+                            <div class="bg-white rounded-2xl p-3">
+                                <img class="sm:w-20 w-14"
+                                    src="https://images.squarespace-cdn.com/content/v1/5a5dbe4632601eb31977f947/1629703651716-J8RVOTD1XO3SDINHP2RG/unnamed+%281%29.png"
+                                    alt="Logo">
+                            </div>
+                            <div class="flex justify-center lg:mt-2 mt-0 lg:ml-0 ml-5">
+                                <img class="w-36" src="/img/code.png" alt="QR code">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // navbar value saat di click
+        document.querySelectorAll('.navbar-btn-value').forEach(button => {
+            button.addEventListener('click', function () {
+                // Hapus class  dari semua tombol
+                document.querySelectorAll('.navbar-btn-value').forEach(btn => {
+                    btn.classList.remove('bg-white-navbar-value');
+                    btn.classList.remove('bg-white');
+                    btn.classList.remove('bg-white/80');
+
+
+                    btn.classList.add('hover:bg-white/50');
+
+
+                });
+
+                this.classList.add('bg-white-navbar-value');
+                this.classList.add('bg-white');
+                this.classList.remove('hover:bg-white/50');
+
+                document.querySelectorAll('pindah-server').addEventListener('click',
+                    function () {
+                        // Hapus class blur dari semua tombol
+                        document.querySelectorAll('.navbar-btn-value').forEach(btn => {
+                            btn.classList.remove('bg-blur');
+                        });
+
+                        // Kembalikan efek blur pada tombol default
+                        if (defaultButton) {
+                            defaultButton.classList.add('bg-blur');
+                        }
+                    });
+
+            });
+        });
+        const burgerButton = document.getElementById('burger-button');
+        const navbarContainer = document.getElementById('navbar-container');
+
+        burgerButton.addEventListener('click', function () {
+            if (navbarContainer.classList.contains('-translate-x-full')) {
+                navbarContainer.classList.remove('-translate-x-full');
+                navbarContainer.classList.add('translate-x-0');
+            } else {
+                navbarContainer.classList.remove('translate-x-0');
+                navbarContainer.classList.add('-translate-x-full');
+            }
+        });
+
+        // btn value left
+        document.querySelectorAll('.btn-img-nav').forEach(button => {
+            button.addEventListener('click', function () {
+                // Hapus class  dari semua tombol
+                document.querySelectorAll('.btn-img-nav').forEach(btn => {
+                    btn.classList.remove('bg-white');
+                    btn.classList.add('hover:bg-white/50');
+
+                });
+
+
+                this.classList.add('bg-white');
+                this.classList.remove('hover:bg-white/50');
+
+
+
+            });
+        });
+    </script>
+
+</body>
+
+</html>

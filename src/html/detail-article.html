@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Article - IndoExplore</title>
+    <link rel="icon" href="/img/mini-icon.png">
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <!-- css -->
+    <link href="/src/css/style.css" rel="stylesheet">
+    <!-- awesome icon -->
+    <link rel="stylesheet" href="/asset/fontAwesome/css/all.min.css">
+    <!-- java script -->
+    <script src="/src/js/detail-article.js" defer></script>
+</head>
+
+<body class="font-trip-r">
+
+    <div class="bg-gradient-blue h-full min-h-screen  flex pb-20 justify-center">
+        <div>
+            <a href="/src/html/article.html"
+                class="sticky top-1  cursor-pointer z-50 mb-3 h-[40px] justify-between flex py-2 px-3 items-center bg-white/50 backdrop-blur-3xl shadow-2xl rounded-2xl">
+                <p class="text-sm">← Go back</p>
+                <p>📰</p>
+            </a>
+
+            <div class="max-w-[1000px] mt-20 overflow-hidden my-3  bg-white/50 rounded-2xl">
+
+                <!-- type of article -->
+                <div class="py-1 px-2  bg-white/50 lg:w-auto w-full  lg:text-left text-center">
+                    <p class="md:text-xl sm:text-base text-sm "><span class="font-trip-m" id="type"></span>
+                        Article</p>
+                </div>
+
+
+                <div class="p-5">
+                    <!-- title -->
+                    <div class="w-full  lg:text-left text-center mb-5 mt-10">
+                        <h1 class="md:text-3xl sm:text-2xl text-xl font-trip-m" id="title">
+                        </h1>
+                        <p class="text-sm text-gray-500" id="date"></p>
+                    </div>
+                    <!-- template-normal -->
+                    <div class="flex lg:flex-row flex-col justify-between ">
+
+                        <div class="lg:w-[470px] w-full lg:h-[300px] h-auto  overflow-hidden rounded-2xl lg:mr-2 mr-0">
+                            <img class="w-full h-full object-cover" id="imageUrl" src="" alt="img">
+                        </div>
+
+                        <div class="lg:w-[470px] w-full lg:mt-0 mt-2 lg:ml-2 ml-0">
+                            <p class=" text-justify sm:text-sm text-xs" id="text1">
+                            </p>
+                        </div>
+                    </div>
+                    <!-- text2 and 3 -->
+                    <div class="flex lg:flex-row flex-col justify-between  mt-3">
+                        <!-- text2 -->
+                        <div class="lg:w-[470px] w-full lg:mt-0 mt-2 lg:mr-2 mr-0">
+                            <p class=" text-justify sm:text-sm text-xs" id="text2"></p>
+                        </div>
+                        <!-- text3 -->
+                        <div class="lg:w-[470px] w-full lg:mt-0 mt-2 lg:ml-2 ml-0">
+                            <p class=" text-justify sm:text-sm text-xs" id="text3"></p>
+                        </div>
+                    </div>
+                    <!-- longText and Title -->
+
+                    <div class="flex-col justify-between  ">
+                        <h1 class="sm:text-xl text-sm font-trip-m" id="longTitle"></h1>
+                        <p class=" mb-5 text-justify sm:text-sm text-xs " id="longText"></p>
+                    </div>
+
+                    <!-- template number -->
+                    <div class="flex lg:flex-row flex-col justify-between  mt-3">
+
+                        <div class=" lg:w-[470px] w-full lg:mr-2 mr-0">
+                            <!-- title1 and number1 -->
+                            <div>
+                                <h1 class="sm:text-xl text-sm font-trip-m" id="titleNumber1"></h1>
+                                <p class=" mb-5 text-justify sm:text-sm text-xs " id="textNumber1"></p>
+                            </div>
+                            <!-- title2 and numebr2 -->
+                            <div>
+                                <h1 class="sm:text-xl text-sm font-trip-m" id="titleNumber2"></h1>
+                                <p class=" mb-5 text-justify sm:text-sm text-xs" id="textNumber2"></p>
+                            </div>
+                        </div>
+                        <div class="lg:w-[470px] w-full lg:ml-2 ml-0">
+                            <!-- title3 and number3 -->
+                            <div>
+                                <h1 class="sm:text-xl text-sm font-trip-m" id="titleNumber3"></h1>
+                                <p class=" mb-5 text-justify sm:text-sm text-xs" id="textNumber3">
+                                </p>
+                            </div>
+                            <!-- title4 and number4 -->
+                            <div>
+                                <h1 class="sm:text-xl text-sm font-trip-m" id="titleNumber4"></h1>
+                                <p class=" mb-5 text-justify sm:text-sm text-xs" id="textNumber4"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- source -->
+                <div class=" ">
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

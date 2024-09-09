@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community - IndoExplore</title>
+    <link rel="icon" href="/img/mini-icon.png">
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <!-- css -->
+    <link href="/src/css/style.css" rel="stylesheet">
+    <!-- awesome icon -->
+    <link rel="stylesheet" href="/asset/fontAwesome/css/all.min.css">
+    <!-- js -->
+    <script src="/src/js/card-community.js"></script>
+</head>
+
+<body class="font-trip-r  h-full min-h-screen">
+    <!-- burger -->
+    <div class=" p-2 fixed top-0 left-0 z-20 bg-white/60  box-shadow-l  rounded-2xl m-3 backdrop-blur-xl ">
+        <button id="burger-button" class="px-3 py-2 hover:bg-white/50  rounded-lg focus:outline-none">
+            <i class="fa-solid fa-bars fa-lg"></i>
+        </button>
+    </div>
+    <!-- navbar -->
+    <div id="navbar"
+        class="duration-200 transition-transform ease-in-out navbar-blog fixed  top-0 left-0 z-10 |  ml-1.5 rounded-2xl font-trip-r text-sm ">
+        <div
+            class="  h-screen overflow-x-scroll w-64  p-5  bg-white/30  backdrop-blur-3xl  text-black  transform     xl:relative ">
+            <nav class="flex flex-col h-full">
+                <!-- Tambahkan tombol close di bagian atas navbar -->
+                <div class="mb-2">
+                    <img class="w-16 pt-16" src="/img/big logo.png" alt="">
+                </div>
+                <div class="text-xl pb-3   font-trip-m  "> Tell Them <br> Your Experience!</div>
+                <div
+                    class="w-full mt-2 flex justify-end items-center mb-4 font-trip-r border-none border-transparent pb-3 ">
+                    <input type="text" style="font-family: tripSans-regular; " placeholder="🔍 Search..."
+                        class="w-full  text-sm h-[40px] pl-2 pr-4 py-2 rounded-lg border-gray-300 focus:outline-none  focus:border-transparent" />
+                </div>
+                <div data-target="all" class=" navbar-btn | py-3 px-4 rounded-lg  hover:bg-white/50 duration-100">
+                    All
+                </div>
+                <div data-target="destination"
+                    class="navbar-btn | py-3 px-4 my-1.5 rounded-lg hover:bg-white/50 duration-100 cursor-pointer">
+                    📍 Destination
+                </div>
+                <div data-target="accommodation"
+                    class="navbar-btn | py-3 px-4 my-1.5 rounded-lg hover:bg-white/50 duration-100 cursor-pointer">
+                    🛌
+                    Accommodation
+                </div>
+                <div data-target="entertainment"
+                    class="navbar-btn | py-3 px-4 my-1.5 rounded-lg  hover:bg-white/50 duration-100 cursor-pointer">
+                    🎬 Entertainment
+                </div>
+                <div data-target="food"
+                    class="navbar-btn | py-3 px-4 my-1.5 rounded-lg hover:bg-white/50 duration-100 cursor-pointer">
+                    🍽️ Culinary Food
+                </div>
+
+
+                <div class="text-lg pr-3 mt-3 pt-3 font-trip-m"> Share to them! </div>
+                <div class="mt-3 py-3 px-4  rounded-lg hover:bg-white/50 duration-100">
+                    <a href="#" class=" text-black">✍🏻 Write Your Story!</a>
+                </div>
+
+                <div class="text-lg pr-3 mt-3 pt-3 pb-2 font-trip-m">Back To...</div>
+                <ul class="px-2 py-1 bg-white/30 rounded-lg flex flex-col">
+                    <li class="my-1.5 rounded-lg bg-h text-sm">
+                        <a href="index.html" class="block py-3 px-4 w-full h-full text-black hover:bg-white/50">Home</a>
+                    </li>
+                    <li class="my-1.5 rounded-lg bg-h">
+                        <a href="explore.html"
+                            class="block py-3 px-4 w-full h-full text-black hover:bg-white/50">Explore</a>
+                    </li>
+                    <li class="my-1.5 rounded-lg bg-h">
+                        <a href="article.html"
+                            class="block py-3 px-4 w-full h-full text-black hover:bg-white/50">Article</a>
+                    </li>
+                    <li class="my-1.5 rounded-lg bg-h  bg-orange-950 hover:bg-white/50 duration-100">
+                        <a href="community.html"
+                            class="block py-3 px-4 w-full h-full text-white/80 hover:text-black">Community</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class=" bg-gradient-blue flex justify-end">
+        <!-- content loop -->
+        <div class="h-full max-w-3/4">
+            <div class="flex overflow-x-scroll xl:mx-10 mx-2">
+                <div class="area-chat-blog-dan-srcng mx-1.5 h-[100vh] p-5 rounded-2xl">
+                    <div id="container-card" class="comment-area h-full w-full rounded-2xl">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- popular area -->
+        <div
+            class=" w-full max-w-sm  md:max-w-xl  h-[100vh] | bg-white/30 backdrop-blur-2xl overflow-hidden justify-center items-center py-5 px-2 md:block hidden">
+            <div class="content-area flex justify-center items-center ">
+                <div>
+                    <h1 class="font-trip-r text-xl">Popular Experience</h1>
+                    <div class="content mt-3 flex-col">
+
+                        <div
+                            class="lg:w-[400px] w-[360px] max-h-[200px] p-3 bg-white/70 rounded-2xl overflow-hidden m-1.5">
+                            <div class="pfp | w-full flex items-center ">
+                                <div class="w-8 h-8 overflow-hidden rounded-full"><img
+                                        class="w-full h-full object-cover"
+                                        src="https://d6ehjqrqtzoun.cloudfront.net/3c6eec45-ebc3-4b52-931b-2e07060c9195.png"
+                                        alt=""></div>
+                                <div class="ml-2 ">
+                                    <h1 class="text-sm font-trip-m">Seo Ah Yi</h1>
+                                    <p class="text-xs">12 september 2023 • Posted </p>
+                                </div>
+                            </div>
+                            <div class="comment-isi mt-2">
+                                <div>
+                                    <h1 class="title | text-lg font-trip-m">Love for Bandung</h1>
+                                </div>
+                                <div class="desc | max-w-[800px] text-xs line-clamp-5">
+                                    <p>Bandung does have an attraction that makes the heart always want to come back.
+                                        From
+                                        the
+                                        cool atmosphere, the view of the mountains that spoil the eyes, to the delicious
+                                        culinary that is addictive, all of them make Bandung never boring. I should have
+                                        invited Cha Hyun Soo,
+                                        and
+                                        Seo
+                                        Yi-kyeong</p>
+                                </div>
+                            </div>
+
+                            <div class="like-unlike | mt-2">
+                                <div class="flex space-x-1">
+                                    <!-- Like Button -->
+                                    <button id=""
+                                        class="likeButton | flex items-center space-x-2 px-2 rounded-xl duration-200 text-gray-600 focus:outline-none">
+                                        <i class="fa fa-thumbs-up fa-2xs"></i>
+                                        <span id="" class="likeCount text-xs">199.999</span>
+                                    </button>
+
+                                    <!-- Dislike Button -->
+                                    <button id=""
+                                        class="dislikeButton | flex items-center space-x-2 px-2 rounded-xl duration-200 text-gray-600 focus:outline-none">
+                                        <i class="fa fa-thumbs-down fa-2xs"></i>
+                                        <span id="" class="dislikeCount text-xs">0</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="lg:w-[400px] w-[360px] max-h-[200px] p-3 bg-white/70 rounded-2xl overflow-hidden mx-1.5 mt-1.5">
+                            <div class="pfp | w-full flex items-center ">
+                                <div class="w-8 h-8 overflow-hidden rounded-full"><img
+                                        class="w-full h-full object-cover"
+                                        src="https://i.pinimg.com/736x/6d/ff/a9/6dffa9ce67a37d383b7d4180047c4a27.jpg"
+                                        alt=""></div>
+                                <div class="ml-2 ">
+                                    <h1 class="text-sm font-trip-m">Lee Eun-hyuk</h1>
+                                    <p class="text-xs">09 july 2022 • Posted </p>
+                                </div>
+                            </div>
+                            <div class="comment-isi mt-2">
+                                <div>
+                                    <h1 class="title | text-lg font-trip-m">I like going to Bali</h1>
+                                </div>
+                                <div class="desc | max-w-[800px] text-xs line-clamp-5">
+                                    <p>very beautiful, and comfortable, Bali is a paradise that captivates visitors with
+                                        its
+                                        stunning landscapes and rich cultural heritage. Known as the Island of the
+                                        Gods,Bali
+                                        offers a unique blend of natural beauty and vibrant traditions. <br> next time
+                                        i'll
+                                        invite lee eun-yu</p>
+                                </div>
+                            </div>
+
+                            <div class="like-unlike | mt-2">
+                                <div class="flex space-x-1">
+                                    <!-- Like Button -->
+                                    <button id=""
+                                        class="likeButton | flex items-center space-x-2 px-2 rounded-xl duration-200 text-gray-600 focus:outline-none">
+                                        <i class="fa fa-thumbs-up fa-2xs"></i>
+                                        <span id="" class="likeCount text-xs">203.034</span>
+                                    </button>
+
+                                    <!-- Dislike Button -->
+                                    <button id=""
+                                        class="dislikeButton | flex items-center space-x-2 px-2 rounded-xl duration-200 text-gray-600 focus:outline-none">
+                                        <i class="fa fa-thumbs-down fa-2xs"></i>
+                                        <span id="" class="dislikeCount text-xs">0</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="lg:w-[400px] w-[360px] max-h-[200px] p-3 bg-white/70 rounded-2xl overflow-hidden mx-1.5 mt-1.5">
+                            <div class="pfp | w-full flex items-center ">
+                                <div class="w-8 h-8 overflow-hidden rounded-full"><img
+                                        class="w-full h-full object-cover"
+                                        src="https://i.pinimg.com/736x/75/1a/44/751a4438fd104e2681a5c8b2db89e026.jpg"
+                                        alt=""></div>
+                                <div class="ml-2 ">
+                                    <h1 class="text-sm font-trip-m">No Ae Seol</h1>
+                                    <p class="text-xs">15 July 2023 • Posted </p>
+                                </div>
+                            </div>
+                            <div class="comment-isi mt-2">
+                                <div>
+                                    <h1 class="title | text-lg font-trip-m">Yum Yum</h1>
+                                </div>
+                                <div class="desc | max-w-[800px] text-xs line-clamp-5">
+                                    <p>As a tourist from Korea, I just had an amazing culinary adventure in Indonesia.
+                                        One of the most memorable experiences was when I tried seblak for the first
+                                        time. It was so mouth-watering, with its spicy seasoning and unique texture. I
+                                        literally couldn’t stop eating it! Although I was hesitant at first, seblak
+                                        turned out to be so delicious that I finished a lot of portions. This is one of
+                                        those foods that I will always miss to anyone and I highly recommend it to
+                                        anyone visiting Indonesia. Seblak has stolen my heart! </p>
+                                </div>
+                            </div>
+
+                            <div class="like-unlike | mt-2">
+                                <div class="flex space-x-1">
+                                    <!-- Like Button -->
+                                    <button id=""
+                                        class="likeButton | flex items-center space-x-2 px-2 rounded-xl duration-200 text-gray-600 focus:outline-none">
+                                        <i class="fa fa-thumbs-up fa-2xs"></i>
+                                        <span id="" class="likeCount text-xs">129.232</span>
+                                    </button>
+
+                                    <!-- Dislike Button -->
+                                    <button id=""
+                                        class="dislikeButton | flex items-center space-x-2 px-2 rounded-xl duration-200 text-gray-600 focus:outline-none">
+                                        <i class="fa fa-thumbs-down fa-2xs"></i>
+                                        <span id="" class="dislikeCount text-xs">0</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div
+                            class="lg:w-[400px] w-[360px] max-h-[200px] p-3 bg-white/70 rounded-2xl overflow-hidden mx-1.5 mt-1.5">
+                            <div class="pfp | w-full flex items-center ">
+                                <div class="w-8 h-8 overflow-hidden rounded-full"><img
+                                        class="w-full h-full object-cover"
+                                        src="https://id-static.rti.org.tw/assets/thumbnails/2015/05/07/20150507000111M.jpg"
+                                        alt=""></div>
+                                <div class="ml-2 ">
+                                    <h1 class="text-sm font-trip-m">Teresa Teng</h1>
+                                    <p class="text-xs">08 Mei 2022 • Posted </p>
+                                </div>
+                            </div>
+                            <div class="comment-isi mt-2">
+                                <div>
+                                    <h1 class="title | text-lg font-trip-m">u need sleep for your healty</h1>
+                                </div>
+                                <div class="desc | max-w-[800px] text-xs line-clamp-5">
+                                    <p>honestly im not her, i just her fans, btw i like her song hehe, oh and i dont
+                                        want talk about accommodation, cz its too nice for talk about it</p>
+                                </div>
+                            </div>
+
+                            <div class="like-unlike | mt-2">
+                                <div class="flex space-x-1">
+                                    <!-- Like Button -->
+                                    <button id=""
+                                        class="likeButton | flex items-center space-x-2 px-2 rounded-xl duration-200 text-gray-600 focus:outline-none">
+                                        <i class="fa fa-thumbs-up fa-2xs"></i>
+                                        <span id="" class="likeCount text-xs">823.232</span>
+                                    </button>
+
+                                    <!-- Dislike Button -->
+                                    <button id=""
+                                        class="dislikeButton | flex items-center space-x-2 px-2 rounded-xl duration-200 text-gray-600 focus:outline-none">
+                                        <i class="fa fa-thumbs-down fa-2xs"></i>
+                                        <span id="" class="dislikeCount text-xs">0</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // nabar blog
+        const burgerButton = document.getElementById('burger-button');
+        const navbar = document.getElementById('navbar');
+        const closeButton = document.getElementById('close-button');
+
+        burgerButton.addEventListener('click', () => {
+            navbar.classList.toggle('-translate-x-full');
+
+        });
+
+        closeButton.addEventListener('click', () => {
+            navbar.classList.toggle('-translate-x-full');
+        });
+
+        document.querySelectorAll('.navbar-btn').forEach(button => {
+            button.addEventListener('click', function () {
+                document.querySelectorAll('.navbar-btn').forEach(btn => {
+                    btn.classList.remove('bg-white');
+                    btn.classList.remove('bg-white/80');
+                    btn.classList.add('hover:bg-white/50');
+                });
+
+                this.classList.add('bg-white');
+                this.classList.remove('hover:bg-white/50');
+            });
+        });
+    </script>
+</body>
+
+</html>

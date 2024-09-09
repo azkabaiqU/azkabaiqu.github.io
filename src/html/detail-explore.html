@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Travel - IndoExplore</title>
+    <link rel="icon" href="/img/mini-icon.png">
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <!-- css -->
+    <link href="/src/css/style.css" rel="stylesheet">
+    <!-- awesome icon -->
+    <link rel="stylesheet" href="/asset/fontAwesome/css/all.min.css">
+    <!-- js -->
+    <script src="/src/js/detail-explore.js"></script>
+    <style>
+        .hover-opacity-img {
+            opacity: 0;
+        }
+
+        .hover-opacity-img:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="font-trip-r">
+    <div class=" bg-gradient-blue h-full min-h-screen    py-5 ">
+        <div class="flex justify-center">
+            <div class="md:px-0 px-5 ">
+
+                <a href="/src/html/explore.html"
+                    class="sticky top-1  cursor-pointer z-50 mb-3 h-[40px] justify-between flex py-2 px-3 items-center bg-white/50 backdrop-blur-3xl shadow-2xl rounded-2xl">
+                    <p id="btn-back" class="text-sm">← Go back</p>
+                    <p>📍</p>
+                </a>
+
+                <div class="img-dan-booking | flex justify-center  ">
+                    <div class="md:flex md:flex-row flex-col justify-center">
+                        <div
+                            class="img-area |  xl:w-[1000px] lg:w-[800px] sm:w-[555px] w-full  md:h-[547px] sm:h-[400px] h-[300px]  sm:rounded-2xl rounded-xl overflow-hidden">
+                            <div
+                                class="absolute  flex justify-end items-end sm:rounded-2xl rounded-lg  xl:w-[1000px] lg:w-[800px] sm:w-[555px] w-[300px]  md:h-[547px] sm:h-[400px] h-[300px] ">
+                                <div onclick="changeImg('https://i0.wp.com/fahum.umsu.ac.id/wp-content/uploads/2024/02/Sejarah-Candi-Prambanan-serta-Fungsinya.jpg?fit=1366%2C768&ssl=1')"
+                                    class="px-2 cursor-pointer py-2 sm:mr-2 mr-12 m-2 overflow-hidden bg-white/70 hover:bg-white/80 duration-200 backdrop-blur-2xl rounded-lg sm:w-[300px] w-full sm:block hidden sm:opacity-100 opacity-0 ">
+                                    <div class="">
+                                        <h1 class=" text-lg font-trip-m md:mt-0 flex">
+                                            <span class="mr-2">
+                                                <div class="w-6 h-6 overflow-hidden rounded-md">
+                                                    <img class="object-cover w-full h-full"
+                                                        src="https://i0.wp.com/fahum.umsu.ac.id/wp-content/uploads/2024/02/Sejarah-Candi-Prambanan-serta-Fungsinya.jpg?fit=1366%2C768&ssl=1"
+                                                        alt="">
+                                                </div>
+                                            </span> About The Place </h1>
+                                        <p id="about" class="ml-1 text-xs">Prambanan Temple is the largest Hindu temple building in Indonesia, built in the 9th century AD.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <img id="img1" class=" object-cover w-full h-full"
+                                src="https://i0.wp.com/fahum.umsu.ac.id/wp-content/uploads/2024/02/Sejarah-Candi-Prambanan-serta-Fungsinya.jpg?fit=1366%2C768&ssl=1"
+                                alt="Main Image">
+                        </div>
+                        <div class="md:flex-col flex md:mt-0 mt-1.5">
+
+                            <div onclick="changeImg('https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcRReXBaRDee3MVLqLoYQJrLKhbj1uIkuDuwoiOv7_GCpHe5XHgfkBdhFCekIDrXI9sGkX5V3gNtBRbwXQwPoqFAXhScWDZZ34HNVCzxLxo')"
+                                class="hover:opacity-85 duration-200  xl:w-[200px] lg:w-[175px]  md:w-[150px] w-full md:h-[200px] h-[100px] overflow-hidden sm:rounded-2xl rounded-xl md:mb-1.5 mb-0 md:ml-1.5 ml-0 md:mr-0 mr-1.5">
+                                <img id="img-2" class="object-cover w-full h-full"
+                                    src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcRReXBaRDee3MVLqLoYQJrLKhbj1uIkuDuwoiOv7_GCpHe5XHgfkBdhFCekIDrXI9sGkX5V3gNtBRbwXQwPoqFAXhScWDZZ34HNVCzxLxo"
+                                    alt="">
+                            </div>
+                            <div onclick="changeImg('https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcRHHIAln-Ve6wGD06Ell6jVqC8SRI5syW0Jts439-ocgaRnaHl-k5VQbm2eHXtK1WXu_gGU6HESd6lEDFY2HKIytQ16chu-ctA_NgorGA')"
+                                class="hover:opacity-85 duration-200 xl:w-[200px] lg:w-[175px] md:w-[150px] w-full md:h-[340px] h-[100px] overflow-hidden sm:rounded-2xl rounded-xl md:mb-1.5 mb-0 md:ml-1.5 ml-0">
+                                <img id="img-3" class="object-cover w-full h-full"
+                                    src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcRHHIAln-Ve6wGD06Ell6jVqC8SRI5syW0Jts439-ocgaRnaHl-k5VQbm2eHXtK1WXu_gGU6HESd6lEDFY2HKIytQ16chu-ctA_NgorGA"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex  justify-center">
+                    <div
+                        class="desc-title | xl:w-full lg:w-[1000px] md:w-[720px] w-full md:pb-3 pb-5  my-3 py-3 md:px-3 px-5 bg-white/30 overflow-hidden rounded-2xl">
+
+                        <div class="w-full  ">
+                            <div class="locate | flex items-center">
+                                <i class="fa-solid fa-location-dot fa-sm"></i>
+                                <p id="locate" class="ml-1 sm:text-sm text-xs">
+                                    Sleman, Yogyakarta</p>
+                            </div>
+                            <div class="tag | flex items-center ">
+                                <p id="tag" class="ml-1 sm:text-sm text-xs gray-desc"># Culture • Sculpture</p>
+                            </div>
+                            <div class="title | ">
+                                <h1 id="title" class="sm:text-2xl text-xl font-trip-m">Candi Prambanan</h1>
+                            </div>
+                        </div>
+                        <div class="flex md:flex-row flex-col w-full mt-7">
+
+                            <div class=" md:w-[700px] w-full    flex-col justify-between">
+                                <div>
+                                    <div class="">
+                                        <h1 class="sm:text-xl text-base font-trip-m">Accommodation Policy</h1>
+                                        <div class="flex mt-1">
+                                            <div class="w-[250px]">
+                                                <h1 class="text-sm  font-trip-m mt-1">Prosedur Check-in</h1>
+                                                <p class="text-sm">🕑 Open: <span
+                                                        class="text-sm ">07:00</span></p>
+                                                <p class="text-sm">🕕 Close: <span class="text-sm">14:00</span></p>
+                                                <p class="text-xs p-1  rounded-md text-gray-500">information may change depending on conditions</p>
+                                                <h1 class="text-sm  font-trip-m mt-1">Other Policies</h1>
+                                                <p class="text-sm">
+                                                    👶🏻 <span>Children
+                                                        over
+                                                        the age of 6 are considered adults, which means they are
+                                                        included in
+                                                        the
+                                                        member list.</span></p>
+                                                <p class="text-sm">
+                                                    <span class="">🚫 No pets allowed</p>
+                                                <p class="text-sm">🚭Smoking is prohibited
+                                                    </span></p>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="fasilitas | mt-5">
+                                        <h1 class="sm:text-xl text-base font-trip-m">Activities <span class="text-gray-500 text-lg font-trip-r">
+                                            (Around)
+                                        </span></h1>
+                                        <div class=" sm:text-sm text-xs mt-2">
+                                            <div class="flex mb-2">
+                                                <div class="w-28 mr-2">
+                                                    <div class="w-28 h-28 overflow-hidden rounded-lg">
+                                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf3KzrknjbcQfHbmUhD9rnUfs_m9UmTOrACLvLDm-55RaR&s=4"
+                                                        alt="img" class="w-full h-full object-cover">
+                                                    </div>    
+                                                    <h1 class="text-xs mt-1">prambanan temple entrance ticket</h1>
+
+                                                </div>
+                                                <div class="w-28 mr-2">
+                                                    <div class="w-28 h-28 overflow-hidden rounded-lg">
+                                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQB84eQkKDd3embTfYideCgUiuazTlYDJz-660xOaQ-kTB&s=4"
+                                                        alt="img" class="w-full h-full object-cover">
+                                                    </div>    
+                                                    <h1 class="text-xs mt-1">the legend of roro jonggrang</h1>
+
+    
+                                                </div>
+                                                <div class="w-28 mr-2">
+                                                    <div class="w-28 h-28 overflow-hidden rounded-lg">
+                                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYrdK9Hm7iJKVJEemyVKQFtD4NNlrFl9I9OP50hncheIqA&s=4"
+                                                        alt="img" class="w-full h-full object-cover">
+                                                    </div>    
+                                                    <h1 class="text-xs mt-1">road trip with jeep</h1>
+
+                                                </div>
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- <div class="contact-them mt-5">
+                                    <h1 class="sm:text-xl text-base font-trip-m">Contact them </h1>
+                                    <p id="phone" class=" text-xs">Phone Number: 0834233424</p>
+                                    <p id="ig" class=" text-xs">Instagram: <span class="text-blue-500"><a
+                                                href="https://www.instagram.com/">Click Here</a></span> </p>
+                                    <p id="x" class=" text-xs">X: <span class="text-blue-500"><a
+                                                href="https://www.instagram.com/">Click Here</a></span> </p>
+                                </div> -->
+
+
+                            </div>
+                            <div class=" md:w-[500px] w-full ">
+                                <div class="sm:mt-0 mt-5 sm:hidden block">
+                                    <h1 class=" text-lg font-trip-m md:mt-0 "> About The Place</h1>
+                                    <p id="about" class="ml-1 text-xs">Surrounded by shops and restaurants,
+                                        this luxury hotel is 2.9 km from the bustling market on Jalan Malioboro, and 5
+                                        km from the Keraton Ngayogyakarta Hadiningrat palace complex.</p>
+                                </div>
+                                <div>
+                                    <h1 class="sm:text-xl text-lg   font-trip-m sm:mt-0 mt-5">History of the Place</h1>
+                                    <p class="ml-1 mt-1  text-xs font-trip-r text-justify">Prambanan Temple (Javanese: ꦕꦟ꧀ꦝꦶꦥꦿꦩ꧀ꦧꦤꦤ꧀, translit. Caṇḍi Prambanan) is the largest Hindu temple building in Indonesia built in the 9th century AD. The temple, also known as Rara Jonggrang, is dedicated to Trimurti, the three main Hindu gods, namely Brahma as the creator god, Vishnu as the preserver god, and Shiva as the destroyer god. Based on the Siwagrha inscription, the original name of this temple complex is Siwagrha (Sanskrit meaning 'House of Shiva'), and indeed in the garbagriha (main room) of this temple there is a three-meter-high statue of Shiva Mahadewa, because the Shaiwa sect prioritizes the worship of the god Shiva in this temple.
+                                    </p>
+                                    <p class="ml-1 mt-3  text-xs font-trip-r text-justify">The Prambanan temple complex as a whole is located in the Special Region of Yogyakarta, but its administrative entrance is located in Central Java. This is what makes Prambanan Temple located in 2 places, namely in Bokoharjo Village, Prambanan, Sleman Regency, Special Region of Yogyakarta,[1][2] and in Tlogo, Prambanan, Klaten Regency, Central Java, or approximately 17 kilometers northeast of Yogya City, 50 kilometers southwest of Surakarta City and 120 kilometers south of Semarang City, right on the border between the Special Region of Yogyakarta and Central Java.[3]
+                                    </p>
+                                    <a href="https://id.wikipedia.org/wiki/Candi_Prambanan#:~:text=Candi%20Prambanan%20adalah%20salah%20satu,Pemelihara%20dan%20Brahma%20sang%20Pencipta." class="ml-1  text-xs font-trip-r text-blue-400 hover:text-blue-700 cursor-pointer">See More In Wiki
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+        <div class="flex justify-center  py-5 px-5">
+            <div class="xl:w-[1210px] lg:w-[1000px] md:w-[720px] w-full mt-10">
+
+                <div class="">
+                    <div class="bg-white/30 rounded-xl w-full p-3">
+                        <div class="blog | ">
+                            <div class="flex justify-between pb-3">
+                                <h1 class="sm:text-xl text-base font-trip-m">See other people's stories about destination </h1>
+                                <a href="/src/html/community.html"
+                                    class="text-gray-600 hover:text-black duration-100 sm:text-sm text-xs">See More</a>
+                            </div>
+                            <div class="overflow-x-scroll h-[330px] w-full  ">
+                                <div id="contaioner-blog-card" class="w-max h-full flex ">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+    </script>
+
+</body>
+
+</html>

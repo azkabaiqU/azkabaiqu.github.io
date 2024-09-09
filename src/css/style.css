@@ -1,0 +1,72 @@
+::-webkit-scrollbar {
+    display: none;
+    /* Sembunyikan scroll bar */
+}
+
+@font-face {
+    font-family: tripSans-bold;
+    src: url('font/TripSans-Bold.ttf');
+}
+
+@font-face {
+    font-family: tripSans-medium;
+    src: url('font/TripSans-Medium.ttf');
+}
+
+@font-face {
+    font-family: tripSans-regular;
+    src: url('font/TripSans-Regular.ttf');
+}
+
+.box-shadows {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.239);
+}
+
+.box-shadow-l {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.10);
+    transition-duration: 400ms;
+
+}
+
+.font-trip-r {
+    font-family: tripSans-regular;
+    color: #2b2b2b;
+}
+
+.font-trip-m {
+    font-family: tripSans-medium;
+    color: #2b2b2b;
+}
+
+.font-trip-b {
+    font-family: tripSans-bold;
+    color: #2b2b2b;
+}
+
+.bg-gradient-blue {
+    background: linear-gradient(to top left, #D7EBF9, #FFF1E2);
+
+}
+
+.bg-brown {
+    background-color: #330201;
+}
+
+/* .bg-brown:hover {
+            background-color: white;
+            opacity:30%;
+        } */
+
+.border-2b {
+    border: 1px solid #2b2b2b;
+}
+
+
+.bg-h:hover {
+    background-color: #f6f6f6;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.gray-desc {
+    color: #707070;
+}

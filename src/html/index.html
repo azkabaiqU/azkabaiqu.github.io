@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - IndoExplore</title>
+    <link rel="icon" href="/img/mini-icon.png">
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <!-- css -->
+    <link href="/src/css/style.css" rel="stylesheet">
+    <!-- awesome icon -->
+    <link rel="stylesheet" href="/asset/fontAwesome/css/all.min.css">
+    <!-- js -->
+    <script src="/src/js/home.js"></script>
+</head>
+
+<body class="bg-gradient-blue">
+    <!-- navbar -->
+    <div id="navbar-normal"
+        class="navbar-area navbar-normal  top-nav-nor position-nav-nor | z-50 fixed top-0 w-full flex justify-center items-center ">
+        <div class="box-shadows min-w-[300px] bg-white/90 backdrop-blur-xl py-1.5 p-1 mt-3 rounded-lg">
+            <ul class="flex justify-center  font-trip-r text-sm">
+                <a href="index.html"
+                    class="mr-1 p-2 px-3 flex items-center  bg-orange-950 text-white/80  rounded-lg ">Home</a>
+                <a href="explore.html" bg-brown class="mr-1 flex items-center px-3 rounded-lg    ">
+                    Explore</a>
+                <a href="article.html" class="mr-1 flex items-center   px-3  rounded-lg">Article</a>
+                <a href="community.html" class="  px-3 flex items-center   rounded-lg ">Community</a>
+            </ul>
+        </div>
+    </div>
+    <!-- content -->
+    <div class="flex  justify-center | pb-10   min-h-screen  font-trip-r">
+        <div>
+            <div>
+                <div class="w-[90vw] ">
+                    <div class="w-full mb-10 md:mt-4 mt-20 flex justify-between">
+                        <div>
+                            <img class="sm:w-36 w-28" src="/img/big logo.png" alt="">
+                        </div>
+                        <div class="flex items-center">
+                        <button
+                            class="mt-1 sm:w-[100px] w-[80px] rounded-lg py-2 px-2 duration-100  text-orange-950 h mr-2 ">
+                            <p class="   text-md text-sm">Sign In</p>
+                        </button>
+                        <button
+                            class="mt-1 sm:w-[100px] w-[80px] rounded-lg py-2 px-2 duration-100 bg-orange-950 hover:bg-white/30">
+                            <p class=" text-white/80 hover:text-black   text-md sm:text-sm text-xs">Sign Up</p>
+                        </button>
+                        </div>
+                    </div>
+                    <!-- opening -->
+                    <div class="w-full md:h-[700px] sm:h-[600px] h-[500px]   relative rounded-2xl overflow-hidden ">
+                        <div class="absolute w-full h-full flex justify-center items-center bg-black/20 ">
+                            <div class="text-center font-trip-r">
+                                <h1 class="sm:text-5xl text-2xl font-trip-m text-white">Explore Indonesia In<br> Your
+                                    Own Way!
+                                </h1>
+                                <p class="sm:text-sm text-xs text-white/80 mt-2">Explore Indonesia from its nature and
+                                    culture,<br>
+                                    from the right side to the left side!</p>
+                                <div id="background" class="flex justify-center items-start  ">
+                                    <div class=" sm:w-[500px] w-[300px] font-trip-r mt-4">
+                                        <input type="text" id="search-bar " type="text" name="search"
+                                            class="bg-white/90  w-full sm:h-[55px] h-[50px] backdrop-blur-xl text-sm focus:box-shadow-l focus:ring-0 focus:ring-gray-300 p-2 px-4 border border-gray-300 sm:rounded-xl rounded-lg"
+                                            placeholder="🔍 Where do you want to explore today?"
+                                            onclick="toggleDropdown()" oninput="filterCards()">
+                                    </div>
+
+                                </div>
+                                <div class="w-[500px] flex justify-center mt-2 ">
+                                    <a href="ticket.html"
+                                        class="flex flex-row text-left justify-start duration-100  backdrop-blur-2xl  items-center rounded-xl  sm:h-[70px] h-[50px] sm:w-[300px] w-[120px]  mr-1.5 bg-white/70 hover:bg-white lg:text-left px-6 ">
+                                        <h1 class="sm:text-4xl text-xl mr-2">🎟️</h1>
+                                        <div class="text-left mt-0  lg:ml-2 ml-0">
+                                            <p class="sm:text-xl text-sm">Ticket</p>
+                                            <p class="text-xs mt-0 sm:block hidden">Plane • Train • Travel</p>
+                                        </div>
+                                    </a>
+                                    <a href="tour-guide.html"
+                                        class="flex flex-row text-left justify-start duration-100  backdrop-blur-2xl  items-center rounded-xl  sm:h-[70px] h-[50px] sm:w-[300px] w-[170px]  bg-white/70 hover:bg-white lg:text-left px-6  ">
+                                        <h1 class="sm:text-4xl text-xl mr-2">🕵🏼‍♀️</h1>
+                                        <div class="text-left ">
+                                            <p class="sm:text-xl text-sm">Tour Guider</p>
+                                            <p class="text-xs mt-0 sm:block hidden">Private • Group</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <img class="object-cover  w-full h-full" src="/img/gunung.png" alt="img">
+                    </div>
+                    <!-- explore sample page -->
+                    <!-- title -->
+                    <div class="sm:flex sm:flex-row flex-col sm:text-left text-center justify-between items-end mt-20">
+                        <h1 id="title" class="sm:text-2xl text-xl font-trip-m">🗺️ Discover the Wonders of
+                            Indonesia:<br>
+                            Natural Paradise and Its Delights</h1>
+                        <a href="explore.html" class="sm:mt-1 rounded-lg p-1   duration-100  ">
+                            <p class=" text-gray-600 hover:text-black duration-100 text-sm">Go To Explore Page →</p>
+                        </a>
+                    </div>
+                    <!-- content of explore -->
+                    <div class="lg:flex lg:flex-row flex-col mt-5 justify-center">
+                        <!-- big-content -->
+                        <!-- part1 -->
+                        <div class=" mr-1.5  ">
+                            <div class="bg-white/80 p-2 rounded-2xl lg:flex lg:flex-row flex-col">
+                                <div>
+                                    <div
+                                    class="2xl:w-[1045px] lg:w-[700px] w-full  sm:h-[450px] h-[350px]  mb-1.5 rounded-2xl overflow-hidden relative">
+
+                                    <div
+                                        class="2xl:w-[1045px] lg:w-[700px] w-full sm:h-[450px] h-[350px] absolute flex justify-between items-end rounded-2xl ">
+                                        <div
+                                            class="m-4 p-1.5 w-[300px] px-4 bg-white/50 hover:bg-white/80 duration-200 backdrop-blur-2xl rounded-lg shadow-xl">
+                                            <h1 class=" sm:text-lg text-sm font-trip-m md:mt-0 flex" id="title-text-desc">Republic
+                                                Of
+                                                Indonesia</h1>
+                                            <p class="text-xs" id="desc-of-place">Indonesia is a country rich in nature
+                                                and
+                                                culture, and has thousands of islands.</p>
+                                        </div>
+                                        <div>
+                                            <div class="sm:m-4 m-0 sm:block hidden">
+                                                <div class="p-1.5 bg-white/90 backdrop-blur-2xl rounded-lg shadow-xl">
+                                                    <div onclick="changeContent('/img/indonesia.png','Republic Of Indonesia','Indonesia is a country rich in nature and culture, and has thousands of islands.')"
+                                                        class="cursor-pointer mb-1.5 w-28 h-14 bg-black rounded-lg overflow-hidden ">
+                                                        <img class="object-cover  w-full h-full"
+                                                            src="/img/indonesia.png" alt="img">
+                                                    </div>
+                                                    <div onclick="changeContent('/img/jawa.png','Island of Java','Java captivates with its rich culture and stunning landscapes, from temples to mountains.')"
+                                                        class="cursor-pointer mb-1.5 w-28 h-14 bg-black rounded-lg overflow-hidden ">
+                                                        <img class="object-cover  w-full h-full" src="/img/jawa.png"
+                                                            alt="img">
+                                                    </div>
+                                                    <div onclick="changeContent('/img/sulawesi.png','Island of Sulawesi','Sulawesi is enchanting with its marine, mountainous and cultural riches. Adventure and diversity await at every corner.')"
+                                                        class="cursor-pointer mb-1.5 w-28 h-14 bg-black rounded-lg overflow-hidden ">
+                                                        <img class="object-cover  w-full h-full" src="/img/sulawesi.png"
+                                                            alt="img">
+                                                    </div>
+                                                    <div onclick="changeContent('/img/kalimantan.png','Island of Kalimantan', 'Kalimantan amazes with its dense tropical forests, vast rivers and unique wildlife.')"
+                                                        class="cursor-pointer mb-1.5 w-28 h-14 bg-black rounded-lg overflow-hidden ">
+                                                        <img class="object-cover  w-full h-full"
+                                                            src="/img/kalimantan.png" alt="img">
+                                                    </div>
+                                                    <div onclick="changeContent('/img/sumatra.png','Island of Sumatra','Sumatra offers stunning natural beauty, from volcanic lakes to tropical forests.')"
+                                                        class="cursor-pointer  w-28 h-14 bg-black rounded-lg overflow-hidden ">
+                                                        <img class="object-cover  w-full h-full" src="/img/sumatra.png"
+                                                            alt="img">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <img id="main-image" class="object-cover object- w-full h-full"
+                                        src="/img/indonesia.png" alt="">
+                                </div>
+                                <div class="md:flex md:flex-row flex-col">
+                                    <!-- destination -->
+                                    <button onclick="goToPage()"
+                                        class="2xl:w-[520px] lg:w-[346px] w-full  md:h-[270px] sm:h-[200px] h-[150px]  md:mr-1.5 mr-0 bg-gray-600 rounded-2xl overflow-hidden relative">
+                                        <div
+                                            class="bg-white/0 hover:bg-white/20 duration-100 absolute w-full h-full flex justify-center items-end group overflow-hidden">
+                                            <div
+                                                class="m-2 py-1  px-3 w-full bg-white/70 backdrop-blur-2xl rounded-lg ">
+                                                <h1 class="  sm:text-lg text-sm font-trip-m md:mt-0 flex ">Destination
+                                                </h1>
+
+                                            </div>
+
+                                        </div>
+                                        <img class="object-cover object-bottom  w-full h-full"
+                                            src="https://asset-2.tstatic.net/tribunmanadotravel/foto/bank/images/danau-moat1.jpg"
+                                            alt="img">
+                                    </button>
+                                    <!-- accommodation -->
+                                    <button onclick="goToPage()"
+                                        class="2xl:w-[520px] lg:w-[346px] w-full  md:h-[270px] sm:h-[200px] h-[150px]  rounded-2xl overflow-hidden relative">
+                                        <div
+                                            class="absolute w-full h-full flex bg-white/0 hover:bg-white/20 duration-100 justify-center items-end group overflow-hidden">
+                                            <div
+                                                class="m-2 py-1  px-3 w-full bg-white/70 backdrop-blur-2xl rounded-lg ">
+                                                <h1 class="  sm:text-lg text-sm font-trip-m md:mt-0 flex ">Accommodation
+                                                </h1>
+                                            </div>
+                                        </div>
+                                        <img class="object-cover object-bottom  w-full h-full"
+                                            src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/453342562.jpg?k=72905cae4a6b58e574ee506196019171075d00d6172b418050f48ace01316166&o=&hp=1"
+                                            alt="img">
+                                    </button>
+                                </div>
+                                </div>
+                           
+                                <!-- part2 -->
+                                <div class="lg:flex-col flex-row flex lg:mt-0 md:mt-1.5 mt-0 lg:ml-1.5 ml-0">
+                                    <!-- entertainment -->
+                                    <a href="/src/html/explore.html"
+                                        class="lg:mr-0 mr-1.5 xl:w-[403px] lg:w-[310px] w-full lg:h-[340px] md:h-[270px] sm:h-[200px] h-[150px]  rounded-2xl md:mb-1.5 mb-0 overflow-hidden relative">
+                                        <div
+                                            class="bg-white/0 hover:bg-white/20 duration-100 absolute w-full h-full flex justify-center items-end group overflow-hidden">
+                                            <div
+                                                class="m-2 py-1  px-3 w-full    bg-white/70 backdrop-blur-2xl rounded-lg">
+                                                <h1 class=" sm:text-lg text-sm font-trip-m md:mt-0 flex ">Entertainment
+                                                </h1>
+
+                                            </div>
+                                        </div>
+                                        <img class="object-cover object-bottom  w-full h-full"
+                                            src="https://lh5.googleusercontent.com/p/AF1QipNmZeYUdm1iOdqoFnhP416Bph87laABYVpGtkk0=w864-h499-n-k-no"
+                                            alt="img">
+                                    </a>
+                                    <!-- culinary food -->
+                                    <a href="/src/html/explore.html"
+                                        class="xl:w-[403px] lg:w-[310px] w-full lg:h-[380px] md:h-[270px] sm:h-[200px] h-[150px]   rounded-2xl overflow-hidden relative ">
+                                        <div
+                                            class="bg-white/0 hover:bg-white/20 duration-100 absolute w-full h-full flex justify-center items-end group overflow-hidden">
+                                            <div class="m-2 py-1  px-3 w-full bg-white/70 backdrop-blur-2xl rounded-lg">
+                                                <h1 class=" sm:text-lg text-sm font-trip-m md:mt-0 flex ">Culinary Food
+                                                </h1>
+
+                                            </div>
+                                        </div>
+                                        <img class="object-cover object-bottom  w-full h-full"
+                                            src="https://indonesiakaya.com/wp-content/uploads/2023/04/bm_Artboard_1.jpg"
+                                            alt="img">
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!-- card of explore  -->
+                    <!-- title -->
+                    <div class="flex justify-between items-end mt-14">
+                        <h1 id="title" class="sm:text-xl text-lg font-trip-m">The Most Exported<br> And Sought After
+                            Places</h1>
+                    </div>
+                    <!-- content -->
+                    <div class="w-[90vw] h-auto overflow-y-hidden  overflow-x-scroll">
+                        <div id="container-travel-card" class="w-max flex items-center">
+                            <!-- travel card loop in js -->
+                        </div>
+                    </div>
+                    <!-- article sample page -->
+                    <!-- title -->
+                    <div class="sm:flex sm:flex-row flex-col sm:text-left text-center justify-between items-end mt-36">
+                        <h1 id="title" class="sm:text-2xl text-xl font-trip-m">📰 Get To Know Indonesia<br>
+                            In The Article</h1>
+                        <a href="article.html" class="sm:mt-1 mt-0 rounded-lg p-1   duration-100  ">
+                            <p class=" text-gray-600 hover:text-black duration-100 sm:text-sm text-xs">Go To Article
+                                Page →</p>
+                        </a>
+                    </div>
+                    <!-- content of article -->
+                    <div class=" flex flex-row  sm:mt-5 mt-0">
+                        <!-- img -->
+                        <div
+                            class=" md:min-w-[650px] w-full md:h-auto rounded-2xl bg-white/50 overflow-hidden p-2 xl:mr-1.5 mr-0">
+                            <img class="object-cover  w-full h-full rounded-lg" src="/img/article-page.png" alt="img">
+                        </div>
+                        <!-- content -->
+
+                    </div>
+                    <!-- article sample page -->
+                    <!-- title -->
+                    <div class="flex justify-between items-end mt-14">
+                        <h1 id="title" class="sm:text-xl text-lg font-trip-m">Recommended Articles<br> For You</h1>
+                    </div>
+                    <!-- card area of article -->
+                    <div class="w-[90vw] md:h-[420px] h-[270px]  overflow-y-hidden  overflow-x-scroll">
+                        <div id="container-article-card" class="w-max flex items-center">
+                            <!-- travel card loop in js -->
+                        </div>
+                    </div>
+                    <!-- community sample page -->
+                    <!-- title -->
+                    <div class="sm:flex sm:flex-row flex-col sm:text-left text-center justify-between items-end mt-32">
+                        <h1 id="title" class="sm:text-2xl text-xl font-trip-m">✍🏻 Tell Them <br>
+                            Your Experience!</h1>
+                        <a href="community.html" class="mt-1 rounded-lg p-1   duration-100  ">
+                            <p class=" text-gray-600 hover:text-black duration-100 text-sm">Go To Community Page →</p>
+                        </a>
+                    </div>
+                    <!-- content of community -->
+                    <div class="w-[90vw]  mb-52 ">
+                        <!-- big img -->
+                        <div
+                            class="sm:mt-5 mt-0 w-full md:h-[700px] sm:h-[450px]  bg-white/50 rounded-2xl mr-1.5 overflow-hidden p-2">
+                            <img id="com-main" class="object-cover  w-full h-full rounded-lg" src="/img/all-com.png"
+                                alt="img">
+                        </div>
+                        <!-- all btn -->
+                        <div class="md:flex md:flex-row flex-col mt-1.5 ">
+                            <div onclick="changeImg('/img/all-com.png')"
+                                class=" py-3  px-4 w-full xl:h-[80px] sm:h-[70px] h-[40px]  text-sm flex justify-center items-center  mr-1.5 rounded-lg bg-white/70 hover:bg-white/90">
+                                All
+                            </div>
+                            <div class="flex  w-full md:mt-0 mt-1.5">
+                                <div onclick="changeImg('/img/destination-com.png')"
+                                    class=" py-3 px-4  w-full xl:h-[80px] sm:h-[70px] h-[40px]  mr-1.5 text-sm flex justify-center items-center rounded-lg bg-white/70 hover:bg-white/90">
+                                    📍 Destination
+                                </div>
+                                <div onclick="changeImg('/img/accommodation-co.png')"
+                                    class=" py-3 px-4  w-full xl:h-[80px] sm:h-[70px] h-[40px]  md:mr-1.5 mr-0 text-sm flex justify-center items-center rounded-lg bg-white/70 hover:bg-white/90">
+                                    🛌 Accommodation
+                                </div>
+                            </div>
+                            <div class="flex w-full md:mt-0 mt-1.5">
+                                <div onclick="changeImg('/img/entertainment-com.png')"
+                                    class=" py-3 px-4  w-full xl:h-[80px] sm:h-[70px] h-[40px]  mr-1.5 text-sm flex justify-center items-center rounded-lg bg-white/70 hover:bg-white/90">
+                                    🎬 Entertainment
+                                </div>
+                                <div onclick="changeImg('/img/food-com.png')"
+                                    class=" py-3 px-4  w-full xl:h-[80px] sm:h-[70px] h-[40px]   flex text-sm justify-center items-center  rounded-lg bg-white/70 hover:bg-white/90">
+                                    🍽️ Culinary Food
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="bg-white/70 m-2 rounded-xl">
+        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+            <div class="md:flex md:justify-between">
+                <div class="mb-6 md:mb-0">
+                    <a href="https://flowbite.com/" class="flex items-center">
+                        <img src="/img/big logo.png" class="h-14 me-3" alt="FlowBite Logo" />
+                    </a>
+                </div>
+                <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                    <div>
+                        <h2 class="mb-6 sm:text-sm text-xs uppercase ">All Page</h2>
+                        <ul class="sm:text-sm text-xs ">
+                            <li class="my-2">
+                                <a href="index.html" class="hover:underline text-gray-500 hover:text-black ">Home</a>
+                            </li>
+                            <li class="my-2">
+                                <a href="explore.html"
+                                    class="hover:underline text-gray-500 hover:text-black ">Explore</a>
+                            </li>
+                            <li class="my-2">
+                                <a href="article.html"
+                                    class="hover:underline text-gray-500 hover:text-black ">Article</a>
+                            </li>
+                            <li class="my-2">
+                                <a href="community.html"
+                                    class="hover:underline text-gray-500 hover:text-black ">Community</a>
+                            </li>
+                            <li class="my-2">
+                                <a href="ticket.html" class="hover:underline text-gray-500 hover:text-black ">Ticket</a>
+                            </li>
+                            <li class="my-2">
+                                <a href="your-order.html" class="hover:underline text-gray-500 hover:text-black ">Your
+                                    Order</a>
+                            </li>
+                            <li class="my-2">
+                                <a href="tour-guide.html" class="hover:underline text-gray-500 hover:text-black ">Tour
+                                    Guide</a>
+                            </li>
+                            <li class="my-2">
+                                <a href="explorer-guide.html"
+                                    class="hover:underline text-gray-500 hover:text-black ">Explorer Guide</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm   uppercase ">Contact Us</h2>
+                        <ul class="text-gray-500 sm:text-sm text-xs ">
+                            <li class="my-2">
+                                <a href="#"
+                                    class="hover:underline text-gray-500 hover:text-black">Facebook</a>
+                            </li>
+                            <li class="my-2">
+                                <a href="#"
+                                    class="hover:underline text-gray-500 hover:text-black">X</a>
+                            </li>
+                            <li class="my-2">
+                                <a href="https://www.instagram.com/kaa.bqi/"
+                                    class="hover:underline text-gray-500 hover:text-black">Instagram</a>
+                            </li>
+                            <li class="my-2">
+                                <a class="hover:underline text-gray-500 hover:text-black">0823241232231</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm   uppercase ">Legal</h2>
+                        <ul class="text-gray-500  font-medium sm:text-sm text-xs">
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-6 border-gray-300 sm:mx-auto  lg:my-8" />
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <span class="text-sm text-gray-500 sm:text-center ">© 2024 <a href="https://flowbite.com/"
+                        class="hover:underline">IndoExplore™</a>. All Rights Reserved.
+                </span>
+                <div class="flex mt-4 sm:justify-center sm:mt-0">
+                    <a href="#" class="text-gray-500 ">
+                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 8 19">
+                            <path fill-rule="evenodd"
+                                d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <span class="sr-only">Facebook page</span>
+                    </a>
+                    <a href="#" class="text-gray-500  ms-5">
+                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 20 17">
+                            <path fill-rule="evenodd"
+                                d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <span class="sr-only">Twitter page</span>
+                    </a>
+
+
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
